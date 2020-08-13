@@ -1,0 +1,40 @@
+
+$font_default: 'Myriad Pro';;
+
+$highlight_color: blue;
+$background_color:#f7f7f7;
+$item_hover_color:#dd2f31;
+$item_color:#777777;
+$mobile-width: 480px; 
+$tablet-width: 768px; 
+$desktop-width: 1024px;  
+
+@mixin mobile { @media (max-width: #{$mobile-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {  @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
+@mixin position-block($position, $width, $height) {
+    position: $position;
+    width: $width;
+    height: $height;
+}
+
+@import "base/header.scss";
+@import "content/product-category";
+@import "content/product";
+@import "content/support-service";
+@import "content/client-say";
+@import "content/blog";
+@import "content/brand";
+@import "base/footer";

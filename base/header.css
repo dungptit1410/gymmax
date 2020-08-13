@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.head {
+  width: 100%;
+  height: 945px;
+  position: relative;
+}
+
+.head__menu {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  top: 0px;
+  right: 0px;
+}
+
+.head__menu img {
+  padding: 15px 135px 15px 0px;
+}
+
+.head__menu a {
+  padding-right: 1px;
+  color: white;
+  font-size: 16px;
+}
+
+.head__menu__navbar li {
+  margin-right: 40px;
+}
+
+.head__menu__icon--vertical-bricks {
+  padding-left: 17px;
+}
+
+.head__banner {
+  height: 945px;
+  width: 100%;
+  background-image: url(../img/banner.png);
+  background-size: 100% 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+
+.head__shop-info {
+  width: 470px;
+  top: 280px;
+  color: white;
+  position: absolute;
+  z-index: 3;
+}
+
+.head__shop-info h2 {
+  font-size: 60px;
+}
+
+.head__shop-info h3 {
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+
+.head__shop-info p {
+  font-size: 14px;
+  padding-bottom: 60px;
+}
+
+.head__shop-info button {
+  color: white;
+  border: solid 1px white;
+}
+
+.head__block-dark {
+  width: 100%;
+  height: 945px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #00000099;
+}
+
+.head__women {
+  position: absolute;
+  z-index: 4;
+  bottom: 0px;
+  right: 230px;
+}
+/*# sourceMappingURL=header.css.map */

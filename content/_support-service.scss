@@ -1,0 +1,155 @@
+.support-service {
+    margin-top: 265px;
+    // height: 500px;
+    // position: relative;
+    @include position-block(relative,100%,500px);
+    @include mobile{
+        height: 120px;
+        
+    }
+    @include tablet{
+        height: 350px;
+    }
+
+    &__layer1{
+        // height: 500px;
+        // position: absolute;
+        @include position-block(absolute,100%,500px);
+        @include mobile{
+            height: 120px;
+            
+        }
+        z-index: 1;
+        img{
+            height: 500px;
+            width: 100%;
+            @include mobile{
+                height: 120px;
+                
+            }
+            @include tablet{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .row{
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .col-md-6{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        @include tablet{
+            .col-md-6 {
+                height: 350px;
+            }
+        }
+        button{
+            color: $item_hover_color;
+            background-color: $background_color;
+            border: 1px solid $item_hover_color;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            
+            @include mobile{
+                font-size: 5px;
+                padding: 5px 5px;
+            }
+            @include tablet{
+                font-size: 10px;
+                padding: 5px 4px;
+            }
+
+        }
+
+        &__left{
+            background-image: url('img/support_img.png');
+            height: 500px;
+            background-size: 150%;
+            background-position: -324px -172px;
+            @include mobile{
+                height: 120px;
+                background-position: 0px 0px;
+                background-size: cover;
+                
+            }
+            @include tablet{
+                height: 100%;
+                background-position: 0px 0px;
+                background-size: cover;
+            }
+        }
+
+        &__right{
+            background-color: $background_color;
+            @include mobile{
+                height: 120px;
+            }
+        }
+    }
+    &__intro{
+        width: 475px;
+        margin-left: 186px;
+        margin-top: 86px;
+        @include mobile{
+            width: 75%;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        @include tablet{
+            width: 340px;
+            margin-left: 58px;
+            margin-top: 60px;
+        }
+        h2{
+            font-size: 41px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            @include mobile{
+                font-size: 12px;
+                margin-bottom: 7px;
+            }
+            @include tablet{
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            font-size: 17px;
+            margin-bottom: 33px;
+            text-align: left;
+            color: $item_color;
+            @include mobile{
+                font-size: 5px;
+                margin-bottom: 10px;
+            }
+            @include tablet{
+                font-size: 10px;
+                margin-bottom: 27px;
+            }
+
+        }
+    }
+    &__layer2{
+        // height: 500px;
+        // position: absolute;
+        @include position-block(absolute,none,500px);
+        z-index: 2;
+        top: 27px;
+        right: 44%;
+        @include mobile{
+            img{
+                width: 50px;
+                height: 90px;
+            }
+        }
+        @include tablet{
+            top: 35px;
+            img{
+                width: 125px;
+                height: 330px;
+            }
+        }
+    }
+}

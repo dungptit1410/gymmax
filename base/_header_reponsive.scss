@@ -1,0 +1,112 @@
+@include mobile{
+    .head{
+        height: 300px;
+        .navbar img {
+            width: 195px;
+            padding: 7px 83px 7px 0px;
+        }
+        &__menu{
+            z-index: 10;
+            .navbar-toggler{
+                background-color: #675d5da6;
+            }
+            &__icon{
+                display: none;
+            }
+            .nav-link {
+                padding: 0;
+            }
+        }
+        &__banner{
+            height: 300px;     
+            background-position: 100% 100%;
+            background-size: cover;     
+        }
+        &__shop-info{
+            width: 180px;
+            
+            top: 90px;
+            h2{
+                font-size: 20px;
+            }
+            h3{
+                font-size: 18px;
+                padding-bottom: 0px;
+            }
+            p{
+                font-size: 10px;
+                margin-bottom: 10px;
+                padding-bottom: 0px;
+            }
+            button{
+                padding: 4px 5px;
+            }
+        }
+        &__women{
+            right: 50px;
+            img{
+                width: 100px;
+            }
+        }
+        &__block-dark{
+            height: 300px;
+        }
+    }
+    
+}
+@include tablet{
+    .container{
+       width: 860px;
+    }
+    .head{
+        height: 600px;
+        &__menu{
+            a{
+                font-size: 12px;
+            }
+            &__navbar{
+                margin-right: 25px;
+                li{
+                    margin-right: 25px;
+                }
+            }
+            img {
+                width: 220px;
+            }
+        }
+        &__shop-info{
+            top: 170px;
+            h3{
+                font-size: 35px;
+            }
+            h2{
+                font-size: 50px;
+            }
+            p{
+                font-size: 12px;
+            }
+            button{
+                padding: 10px 19px;
+                font-size: 12px;
+            }
+        }
+        &__banner{
+            height: 600px;
+            background-position: 100% 100%;
+            background-size: cover;  
+        }
+        &__women 
+            {
+                width: 230px;
+                right: 105px;
+                img{
+                    width: 270px;
+                    height: 450px;
+                }
+            }
+        &__block-dark{
+            height: 600px;
+        }
+    }
+   
+}
