@@ -9,15 +9,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <!-- <link rel="stylesheet" href="base/head.css"> -->
-    <link rel="stylesheet" href="common/bootstrap-4.5.2-dist/css/bootstrap.css">
-    <script src="common/bootstrap-4.5.2-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="common/bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/css/bootstrap.css">
+    
+    <script src="common/bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/js/bootstrap.js"></script>
     <link
       href="common/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="common/font/stylesheet.css">
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="theme_reponsive.css">
+    <script src="common/js/theme.js"></script>
 </head>
 <body>
     <header class="head">
@@ -67,9 +70,45 @@
     </div>
     </nav>
     </div>
-    <div class="head__banner">
-        
-        
+    <div class="head__menu-responsive">
+        <nav class="navbar navbar-dark bg-dark">
+            
+          
+        <div class="container">
+            <img src="img/logo.png" alt="">
+            <div id="mySidepanel" class="sidepanel">
+                <div class="sidepanel__sign-close">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+                <div class="sidepanel__menu"> 
+                    <a href="#">Home</a>
+                    <a href="#">Pages</a>
+                    <a href="#">Classes</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contacts</a>
+                    <form action="">
+                        <input type="search" placeholder = "Search">
+                        <i class="fas fa-search"></i>
+                    </form>
+                </div> 
+            </div>
+        <ul class="nav justify-content-end head__menu-responsive__icon">
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i><span class="head__menu__icon--vertical-bricks">|</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-user"></i><span class="head__menu__icon--vertical-bricks">|</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="openNav()">☰</a>
+            </li>
+          </ul>
+        </div>
+        </nav>
+    </div>
+    <div class="head__banner">   
     </div>
     <div class="container">
     <div class="head__shop-info">
@@ -83,9 +122,9 @@
         
     </div>
     <div class="head__women">
-        <div class="container">
+      
             <img src="img/girl.png" alt="">
-        </div>
+        
     </div>
     </div>
     <div class="head__block-dark">
@@ -100,37 +139,37 @@
         <div class="container">
             <div class="row">
             
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info ">
                 <img src="img/1.png" alt="">
             </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info product-category__logo">
                 <img class="product-category__info__icon" src="img/strength.png">
                 <h4>Strength</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info">
                 <img src="img/2.png" alt="">
                 
             </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info product-category__logo">
                 <img class="product-category__info__icon" src="img/strength1.png">
                 <h4>dumbbells</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info">
                 <img src="img/3.png" alt="">
             </div>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-12">
             <div class="product-category__info product-category__logo">
                 <img class="product-category__info__icon" src="img/strength2.png">
                 <h4>power rack & cages</h4>
@@ -148,14 +187,14 @@
             <div class="product__menu">
                 <ul>
                     <li class="active"><a href="" >Top Sellers</a></li>
-                    <li><a href="">Feature</a></li>
+                    <li><a href="">Featured</a></li>
                     <li><a href="">Most Reviews</a></li>
                 </ul>
             </div>
             <hr>
             <div class="product__list">
                 <div class="row">
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12">
                         <div class="product__list__info first">
                             <div class="product__list__info__image first">
                                 <img src="img/product1.png" alt="">
@@ -174,7 +213,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product2.png" alt="">
@@ -193,7 +232,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  col-6">
+                    <div class="col-md-3  col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product3.png" alt="">
@@ -212,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  col-6">
+                    <div class="col-md-3  col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product4.png" alt="">
@@ -231,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3  col-6">
+                    <div class="col-md-3  col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product5.png" alt="">
@@ -250,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product6.png" alt="">
@@ -269,7 +308,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product7.png" alt="">
@@ -288,7 +327,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-6">
+                    <div class="col-md-3 col-12">
                         <div class="product__list__info">
                             <div class="product__list__info__image">
                                 <img src="img/product8.png" alt="">
@@ -315,10 +354,10 @@
     <div class="support-service">
         <div class="support-service__layer1">
         <div class="row">
-            <div class="col-md-6 col-6 support-service__layer1__left">
+            <div class="col-md-6 col-12 support-service__layer1__left">
                
             </div>
-            <div class="col-md-6 col-6 background--grey support-service__layer1__right">
+            <div class="col-md-6 col-12 background--grey support-service__layer1__right">
                 <div class="support-service__intro">
                  <h2>Great Support & Service</h2> 
                  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
@@ -390,17 +429,17 @@
             <div class="container">     
                 <h2>From Our Blog</h2>
                 <div class="row">
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-12">
                         <img src="img/blog1.png" alt="">
                         <h4 class="first">Lorem Ipsum is simply</h4>
                         <p>By <span class="author--bold">Jonh Joe</span> - june 12, 2019</p>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-12">
                         <img src="img/blog2.png" alt="">
                         <h4>The standard Lorem Ipsum passage</h4>
                         <p>By <span class="author--bold">Jonh Joe</span> - june 12, 2019</p>
                     </div>
-                    <div class="col-md-4 col-4">
+                    <div class="col-md-4 col-12">
                         <img src="img/blog3.png" alt="">
                         <h4>The standard chunk of Lorem Ipsum</h4>
                         <p>By  <span class="author--bold">Jonh Joe</span> - june 12, 2019</p>
@@ -413,22 +452,22 @@
         <div class="brand">
             <div class="container">
                 <div class="row align-items-center">
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img  src="img/brand1.png" alt="">
                 </div>
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img src="img/brand2.png" alt="">
                 </div>
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img   src="img/brand3.png" alt="">
                 </div>
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img  src="img/brand4.png" alt="">
                 </div>
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img  src="img/brand5.png" alt="">
                 </div>
-                <div class="col-md-2 col-2">
+                <div class="col-md-2 col-4">
                     <img src="img/brand6.png" alt="">
                 </div>
             </div>
@@ -452,7 +491,7 @@
              <hr class="foot__line">
              <div class="about-company">
                  <div class="row">
-                     <div class="col-md-3 col-3">
+                     <div class="col-md-3 col-12">
                          <h5>Contact us</h5>
                          <ul>
                          <li><i class="fas fa-map-marker-alt about-company__icon--right"></i>200 Lincoln Ave, Salinas, CA 93901</li>
@@ -461,7 +500,7 @@
                          <li><i class="fas fa-clock about-company__icon--right"></i>9:00 - 20:00 All day</li>
                         </ul>
                      </div>
-                     <div class="col-md-3 col-3">
+                     <div class="col-md-3 col-12">
                         <h5>My Account</h5>
                         <ul>
                         <li>My account</li>
@@ -470,7 +509,7 @@
                         <li>Login</li>
                        </ul>
                     </div>
-                    <div class="col-md-3 col-3">
+                    <div class="col-md-3 col-12">
                         <h5>Information</h5>
                         <ul>
                         <li>About us</li>
@@ -479,7 +518,7 @@
                         <li>Privacy Policy</li>
                        </ul>
                     </div>
-                    <div class="col-md-3 col-3">
+                    <div class="col-md-3 col-12">
                         <h5>Quick link</h5>
                         <ul>
                         <li>New user</li>

@@ -1,12 +1,17 @@
 .brand{
     padding-top: 25px;
     padding-bottom: 12px;
+    background-color: #f7f7f7;
+    @include mobile{
+        padding-top: 0;
+    }
 
     img{
         margin-left: 18px;
         @include mobile{
-            width: 35px;
+            width: 100%;
             margin-left: 0;
+            padding-bottom: 15px;
         }
         @include tablet{
             width: 100px;

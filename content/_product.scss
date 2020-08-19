@@ -1,14 +1,20 @@
 .product{
     height: 760px;
     @include mobile{
-        height: 930px;
+        height: 3260px;
     }
     @include tablet{
-        height: 610px;
+        height: 690px;
     }
-    background-color: $background_color;
+    background-color: white;
     &__menu{
         padding-top: 134px;
+        @include tablet{
+            padding-top: 50px;
+        }
+        @include mobile{
+            padding-top: 175px;
+        }
         ul{
             list-style: none;
             padding: 0;
@@ -16,129 +22,121 @@
 
             li{
                 display: inline-block;
-                &:hover{
-                    a{
-                        &:before{
-                            transform: scaleX(1);
-                        }
-                    }
+                @include mobile{
+                    display: block;
+                    margin-bottom: 15px;
+                    padding-bottom: 12px;
+                    text-align: center;
+                    &:hover{
+                        border-bottom: 3px solid #dd3032;
                 }
+                }
+                // &:hover{
+                //     //border-bottom: 3px solid #dd3032;
+                //     // a{
+                //     //     // &:before{
+                //     //     //     transform: scaleX(1);
+                //     //     // }
+                //     // }
+                // }
+
 
                  a{
                     text-decoration: none;
                     color: black;
                     text-transform: uppercase;
-                    padding: 15px 18px;
-                    font-size: 20px;
+                    padding: 13px 16px;
+                    font-size: 18px;
                     font-weight: bold;
-                    position: relative;
+                    //position: relative;
 
-                    @include mobile{
-                        padding: 19px 5px;
-                        font-size: 8px;
-                    }
+                   
                     @include tablet{
-                        font-size: 14px;
+                        //font-size: 14px;
                         padding: 16px 18px;
                     }
-
-                    &:before{
-                        content: '';
-                        height: 3px;
-                        background: red;
-                        width: 100%;
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        transition: all ease .3s;
-                        transform: scaleX(0);
+                    &:hover{
+                        border-bottom: 3px solid #dd3032;
                     }
+
+                    // &:before{
+                    //     content: '';
+                    //     height: 3px;
+                    //     background: red;
+                    //     width: 100%;
+                    //     position: absolute;
+                    //     left: 0;
+                    //     bottom: 0;
+                    //     transition: all ease .3s;
+                    //     transform: scaleX(0);
+                    // }
                  }
             }
             li.active{ 
-            a{
-                &:before{
-                    transform: scaleX(1);
+                a{
+                    border-bottom: 3px solid #dd3032;
                 }
-            }
+                @include mobile{
+                    border-bottom: 3px solid #dd3032;
+                }
             }
         }
     }
     hr{
-        margin-top: 13px;
+        margin-top: 12px;
+        @include mobile{
+            margin-top: -16px;
+        }
     }
 
     &__list{
 
-        .row{
-            margin-left: 0;
-            margin-right: 0;
-        }
-        .col-md-3 {
-            max-width: 273px;
-            background-color: white;
-            margin-right: 27px;
-             padding-right: 0; 
-             padding-left: 0;
-        }
-        .col-md-3:nth-child(4n){
-            margin-right: 0px;
-        }
-        .col-md-3:nth-child(1){
-            height: 333px;
-            margin-bottom: 45px;
-        }
-        @include tablet{
-            .col-md-3.col-6 {
-                margin-right: 10px;
-                max-width: 205px;
-                height: 270px;
+        // .row{
+        //     margin-left: 0;
+        //     margin-right: 0;
+        // }
+       
+        // @include tablet{
+        //     .col-md-3.col-6 {
+        //         margin-right: 10px;
+        //         max-width: 205px;
+        //         height: 270px;
                 
-            }
-            .col-md-3:nth-child(1) {
-                height: 242px; 
-                margin-bottom: 20px;
-           }
-        }
+        //     }
+            
+        // }
 
         @include mobile{
-            .col-6{
-                padding-right: 0px;
-                padding-left: 0px;
-                max-width: 140px;
-                margin-right: 5px;
-                margin-bottom: 5px;
-                height: 210px;
-            }
-            .col-md-3:nth-child(1) {
-                 height: 210px; 
-                margin-bottom: 5px;
-            }
+            
+            
         }
-        @include tablet{
-            .col-md-3{
-                width: 100%;
-                height: 251px;
-            }
-        }
+        // @include tablet{
+        //     .col-md-3{
+        //         width: 100%;
+        //         height: 251px;
+        //     }
+        // }
         margin-top: 40px;
         &__info{
             // width: 273px;
             // height: 333px;
             // position: relative;
-            @include position-block(relative,273px,333px);
+            @include position-block(relative,100%,333px);
             margin-bottom: 45px;
             @include mobile{
-                height: 210px;
-                width: 100%;
+               
+                    height: 350px;
+                    width: 100%;
+                    border: 1px solid #eee;
+                
             }
             @include tablet{
-                height: 90%;
-                width: 100%;
+                height: 270px;
+                
 
                
                 
-            }
+                }
             &:hover{
                 box-shadow: 0px 3px 13px #ebebeb;
                 .product__list__info__icon{
@@ -150,7 +148,7 @@
                 // width: 273px;
                 // height: 333px;
                 // position: absolute;
-                @include position-block(absolute,273px,333px);
+                @include position-block(absolute,100%,333px);
                 z-index: 1;
                 display: block;
                 text-align: center;
@@ -160,25 +158,22 @@
                     width: 100%;
                     top: 35px;
                     img{
-                        width: 65%;
+                        width: 50%;
                     }
                 }
                 @include tablet{
-                    height: 90%;
-                    width: 100%;
+                    
                     img{
                         width: 65%;
                     }
                     
                 }
-                // img{
-                //     width: 60%;
-                // }
+                
             }
             &__icon{
                 position: absolute;
                 z-index: 2;
-                top: 23px;
+                top: 18px;
                 right: 8px;
                 opacity: 0;
                 transition: 0.4s;
@@ -188,28 +183,31 @@
                 }
 
                 i{
-                    padding: 8px 8px;
-                    border: 1px solid gray;
-                    border-radius: 7px;
+                    padding: 9px 9px 8px 8px;
+                    border: 1px solid #777777;
+                    
+                    border-top-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
                     font-size: 16px;
-                    margin-bottom: 13px;
+                    margin-bottom: 14px;
                     color: #777777;
                     margin-right: 12px;
 
                     &:hover{
                         color: white;
                         background-color: $item_hover_color;
+                        border: 1px solid $item_hover_color;
                     }
 
-                    @include mobile{
-                        padding: 3px 3px;
+                    // @include mobile{
+                    //     padding: 3px 3px;
                         
-                        border-radius: 2px;
-                        font-size: 8px;
-                        margin-bottom: 10px;
-                        color: #777777;
-                        margin-right: 8px;
-                    }
+                    //     border-radius: 2px;
+                    //     font-size: 8px;
+                    //     margin-bottom: 10px;
+                    //     color: #777777;
+                    //     margin-right: 8px;
+                    // }
                     @include tablet{
                         padding: 3px 3px;
                         
@@ -224,39 +222,41 @@
             &__title{
                 position: absolute;
                 z-index: 3;
+                position: absolute;
+                z-index: 3;
                 bottom: 55px;
-                left: 33px;
-                font-size: 16px;
+                left: 28px;
+                font-weight: 400;
+                font-size: 14px;
+            
                 @include mobile{
-                    font-size: 12px;
+                    //font-size: 12px;
                     left: 15px;
                     bottom: 30px;
                 }
-                @include tablet{
-                    font-size: 14px;
-                    bottom: 40px;
-                }
+                // @include tablet{
+                //     font-size: 14px;
+                //     bottom: 40px;
+                // }
             }
             &__price{
                 position: absolute;
                 z-index: 3;
-                bottom: 33px;
-                left: 33px;
+                bottom: 31px;
+                left: 27px;
                 font-size: 14px;
                 font-weight: bold;
                 @include mobile{
-                    font-size: 12px;
+                    //font-size: 12px;
                     bottom: 12px;
                     left: 15px;
                 }
-                @include tablet{
-                    font-size: 12px;
-                    bottom: 20px;
-                }
+                // @include tablet{
+                //     font-size: 12px;
+                //     bottom: 20px;
+                // }
             }
         }
     }
-    .first{
-        height: 100%;
-    }
+    
 }

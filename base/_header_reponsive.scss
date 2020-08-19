@@ -1,21 +1,127 @@
 @include mobile{
+    .container{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .head{
         height: 300px;
-        .navbar img {
-            width: 195px;
-            padding: 7px 83px 7px 0px;
-        }
+        
         &__menu{
-            z-index: 10;
-            .navbar-toggler{
-                background-color: #675d5da6;
-            }
-            &__icon{
-                display: none;
-            }
-            .nav-link {
+            // z-index: 10;
+            // .navbar-toggler{
+            //     background-color: #675d5da6;
+            // }
+            // &__icon{
+            //     display: none;
+            // }
+            // .nav-link {
+            //     padding: 0;
+            // }
+            display: none;
+        }
+        &__menu-responsive{
+            .navbar{
                 padding: 0;
             }
+            nav.navbar.navbar-dark.bg-dark {
+                background-color: black !important;
+            }
+            @include position-block(absolute,100%,99px);
+            z-index: 15;
+            top: 0px;
+            background-color: black;
+                img{
+                    width: 193px;
+                    
+                    padding: 28px 83px 7px 0px;
+                }
+            .sidepanel {
+                width: 0;
+                position: fixed;
+                z-index: 50;
+                height: 100%;
+                top: 0;
+                left: 0;  
+                overflow-x: hidden;
+                transition: 0.5s;
+                
+                &__menu{
+                    padding-top: 32px;
+                    width: 260px;
+                    background-color: black;
+                    height: 100%;
+                    a {
+                        padding: 12px 8px 12px 32px;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: 600;
+        
+                        color:white;
+                        display: block;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: #dd2f31;
+                            color: white;
+                        }
+                
+                    }
+                    form {
+                        /* color: white; */
+                        margin-left: 23px;
+                        margin-top: 15px;
+                        i.fas.fa-search {
+                            color: white;
+                        }
+                    }
+                    input[type="search"] {
+                        border-radius: 50px;
+                        background-color: #171717;
+                        color: white;
+                        height: 47px;
+                        width: 191px;
+                        border: 1px solid #171717;
+                       
+                        /* color: white; */
+                    }
+                    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: white;
+                        opacity: 1; /* Firefox */
+                        padding-left: 20px;
+                      }
+                      
+                    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        color: white;
+                        padding-left: 20px;
+                      }
+                      
+                    ::-ms-input-placeholder { /* Microsoft Edge */
+                        color: white;
+                        padding-left: 20px;
+                      }
+              
+              
+                }
+                }
+              
+              
+              
+              .sidepanel .closebtn {
+                position: absolute;
+                top: 0;
+                right: -1px;
+                font-size: 36px;
+                color: white;
+              }
+              &__icon{
+                padding-top: 24px;
+                a.nav-link {
+                    padding: 10px 9px;
+                    color: white;
+                }
+              }
         }
         &__banner{
             height: 300px;     
@@ -23,27 +129,26 @@
             background-size: cover;     
         }
         &__shop-info{
-            width: 180px;
             
-            top: 90px;
+            width: 260px;
+            top: 150px;
+
             h2{
-                font-size: 20px;
+                font-size: 30px;
             }
             h3{
-                font-size: 18px;
+                font-size: 22px;
                 padding-bottom: 0px;
             }
             p{
-                font-size: 10px;
-                margin-bottom: 10px;
-                padding-bottom: 0px;
+                display: none;
             }
             button{
-                padding: 4px 5px;
+                display: none;
             }
         }
         &__women{
-            right: 50px;
+            right: 30px;
             img{
                 width: 100px;
             }
@@ -56,7 +161,7 @@
 }
 @include tablet{
     .container{
-       width: 860px;
+       max-width: 960px;
     }
     .head{
         height: 600px;
@@ -73,6 +178,103 @@
             img {
                 width: 220px;
             }
+        }
+        &__menu-responsive{
+            nav.navbar.navbar-dark.bg-dark {
+                background-color: black !important;
+            }
+            @include position-block(absolute,100%,99px);
+            z-index: 15;
+            top: 0px;
+            background-color: black;
+            img{
+                padding: 22px 83px 15px 0px;;
+                width: 220px;
+            }
+            .sidepanel {
+                width: 0;
+                position: fixed;
+                z-index: 50;
+                height: 100%;
+                top: 0;
+                left: 0;  
+                overflow-x: hidden;
+                transition: 0.5s;
+                
+                &__menu{
+                    padding-top: 32px;
+                    width: 260px;
+                    background-color: black;
+                    height: 100%;
+                    a {
+                        padding: 12px 8px 12px 32px;
+                        text-decoration: none;
+                        font-size: 14px;
+                        font-weight: 600;
+        
+                        color:white;
+                        display: block;
+                        transition: 0.3s;
+                        &:hover{
+                            background-color: #dd2f31;
+                            color: white;
+                        }
+                
+                    }
+                    form {
+                        /* color: white; */
+                        margin-left: 23px;
+                        margin-top: 15px;
+                        i.fas.fa-search {
+                            color: white;
+                        }
+                    }
+                    input[type="search"] {
+                        border-radius: 50px;
+                        background-color: #171717;
+                        color: white;
+                        height: 47px;
+                        width: 191px;
+                        border: 1px solid #171717;
+                       
+                        /* color: white; */
+                    }
+                    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                        color: white;
+                        opacity: 1; /* Firefox */
+                        padding-left: 20px;
+                      }
+                      
+                    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                        color: white;
+                        padding-left: 20px;
+                      }
+                      
+                    ::-ms-input-placeholder { /* Microsoft Edge */
+                        color: white;
+                        padding-left: 20px;
+                      }
+              
+              
+                }
+                }
+              
+              
+              
+              .sidepanel .closebtn {
+                position: absolute;
+                top: 0;
+                right: -1px;
+                font-size: 36px;
+                color: white;
+              }
+              &__icon{
+                  padding-top: 10px;
+                a.nav-link {
+                    padding: 10px 9px;
+                    color: white;
+                }
+              }
         }
         &__shop-info{
             top: 170px;

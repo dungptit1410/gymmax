@@ -9,8 +9,8 @@
     background-color: white;
     h2{
         padding-top: 88px;
-        font-size: 41px;
-        padding-bottom: 40px;
+        font-size: 36px;
+        padding-bottom: 44px;
         font-weight: bold;
         @include mobile{
             font-size: 18px;
@@ -22,9 +22,10 @@
         }
         li{
             border-radius: 100%;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background-color: #cccccc;
+            margin-right: 6px;
         }
     }
     .carousel-item {
@@ -41,7 +42,7 @@
             margin-bottom: 22px;
         }
         .comment {
-            width: 770px;
+            width: 779px;
             margin: auto;
             @include mobile{
                 width: 100%;
@@ -50,18 +51,22 @@
             h4{
                 text-transform: uppercase;
                 font-weight: bold;
+                font-size: 18px;
             }
             p{
-                font-size: 21px;
-                margin-right: 21px;
-                margin-bottom: 24px;
+                font-size: 18px;
+                margin-right: 7px;
+                line-height: 1.7;
+                margin-bottom: 30px;
+                
                 color: $item_color;
                 @include mobile{
                     font-size: 8px;
                 }
             }
             p.happy-client{
-                font-size: 16px;
+                font-size: 14px;
+                margin-right: 0;
                 @include mobile{
                     font-size: 10px;
                 }

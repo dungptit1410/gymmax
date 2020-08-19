@@ -4,7 +4,9 @@
     font-family: $font_default;
 }
 .container{
-    max-width: 1174px;
+    @include desktop{
+        max-width: 1174px;
+    }
     padding-right: 0;
     padding-left: 0;
 }
@@ -22,14 +24,14 @@
         top: 0px;
         right: 0px;
         img{
-            padding: 15px 83px 15px 0px;
+            padding: 11px 83px 15px 0px;
         }
 
         a{
             
             color: white;
-            font-size: 17px;
-            font-weight: bold;
+            font-size: 16px;
+            font-weight: 400;
             @include tablet{
                 font-size: 12px;
             }
@@ -39,7 +41,7 @@
         }
 
         &__navbar li{
-            margin-right: 40px;
+            margin-right: 36px;
             
         }
         &__icon{
@@ -71,30 +73,32 @@
     &__shop-info{
         @include position-block(absolute,530px,none);
         // width: 470px;
-        top: 294px; 
+        top: 298px; 
         color: white;
         // position: absolute;
         z-index: 3;
         h2{
-            font-size: 69px;
-            font-weight: bold;
+            font-size: 60px;
+            font-weight: 700;
         }
         h3{
-            font-size: 46px;
+            font-size: 40px;
             padding-bottom: 17px;
-            margin-top: -8px;
-            font-weight: bold;
+         
+            font-weight: 700;
         }
         p{
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 1.75;
             padding-bottom: 40px;
         }
         button{
             color: white;
             border: solid 1px white;
-            padding: 11.5px 46px;
+            padding: 13.5px 47px;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 14px;
+            font-weight: 500;
         }
 
     }
