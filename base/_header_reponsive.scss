@@ -312,3 +312,16 @@
     }
    
 }
+@include tablet_small{
+    .container{
+        max-width: 720px;
+     }
+    nav.navbar.navbar-expand-sm.navbar-light {
+        display: none;
+    }
+}
+@include respon650{
+    .head__women {
+        right: 100px;
+    }
+}

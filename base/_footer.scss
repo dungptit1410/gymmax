@@ -68,6 +68,10 @@
             li {
                 font-size: 14px;
                 padding-bottom: 19px;
+                a{
+                    color:$item_color;
+                    text-decoration: none;
+                }
                 @include mobile{
                     //font-size: 4px;
                     padding-bottom: 15px;
